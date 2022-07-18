@@ -27,7 +27,7 @@ const CreateAccountPage = () => {
 
   function validatePassword(password1, password2) {
     let result = false
-    const regex = /^(?=.*[!@#$%^&*_+])(?=.*[a-z])(?=.*[A-Z]).{4,}$/
+    const regex = /^(?=.*[!@#$%^&*_+])(?=.*[a-z])(?=.*[A-Z]).{4,20}$/
 
     // /^               : Start
     // (?=.{8,})        : Length
@@ -64,7 +64,6 @@ const CreateAccountPage = () => {
       image: 'https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png',
       chats: [],
       banned: [],
-      deleted: false,
     }
     
     if (validateUsername(user.username)) {

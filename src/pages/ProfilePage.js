@@ -45,7 +45,7 @@ const ProfilePage = () => {
 
   function validatePassword(password) {
     let result = false
-    const regex = /^(?=.*[!@#$%^&*_+])(?=.*[a-z])(?=.*[A-Z]).{4,}$/
+    const regex = /^(?=.*[!@#$%^&*_+])(?=.*[a-z])(?=.*[A-Z]).{4,20}$/
 
     // /^               : Start
     // (?=.{8,})        : Length
@@ -71,7 +71,7 @@ const ProfilePage = () => {
       <div><img className='b1' src={user.image} alt="" /></div>
       {getError && <div className='red'>Error: {getError}</div>}
       <div>
-        <input className='m10' type="text" placeholder='paste image url' ref={pictureRef} defaultValue='https://www.basketnews.lt/paveikslelis-331580-vbg.jpg'/>
+        <input className='m10' type="text" placeholder='paste image url' ref={pictureRef} defaultValue='https://avatars.githubusercontent.com/u/100585186?v=4'/>
         <button onClick={changeProfilePicture}>Change profile photo</button>
       </div>
       <div className='p5 m10'>Your password is: {user.password}</div>
