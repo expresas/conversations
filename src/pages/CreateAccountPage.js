@@ -94,7 +94,7 @@ const CreateAccountPage = () => {
       <div className='m10'>
         <button onClick={createAccount}>Create account</button>
       </div>
-      {getError && <div className='m10'>Error: {getError}</div>}
+      {getError && <div className='m10 red'>Error: {getError}</div>}
     </div>
   )
 }

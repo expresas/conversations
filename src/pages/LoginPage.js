@@ -50,7 +50,7 @@ export const LoginPage = () => {
       <div className='m10'>
         <button onClick={loginToAccount}>Login</button>
       </div>
-      {getError && <div className='m10'>Error: {getError}</div>}
+      {getError && <div className='m10 red'>Error: {getError}</div>}
     </div>
   )
 }
